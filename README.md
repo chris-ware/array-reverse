@@ -1,35 +1,51 @@
 # Write a function to reverse a provided array
-Write a single, low-level function in PHP to reverse the order of items in a provided array *whilst maintaining their key associations*.
+Write a single, low-level function in PHP to reverse the order of items in a provided array **whilst maintaining their key associations**.
 
-Please do this *without* looking for solutions online, Googling/Stackoverflow... We're looking to see your ability. Checking against php.net docs is fine if you need to.
+Please do this **without** looking for solutions online, Googling/Stackoverflow... We're looking to see your ability. Checking against php.net docs is fine if you need to.
 
 This should be accomplished without using PHP's array_* functions, ArrayIterator as well as end(), next(), prev(), current() and sort() functions... Other PHP functions are fine.
 
-To get you started here's the structure for the function we'd like you to code - if you'd like to add additional arguments for use in #3, that's fine:
+To get you started here's the structure for the function we'd like you to code, the second argument is there for use in #3:
 
 ```php
 <?php
 declare(strict_types = 1);
 
-function arrayReverse(array $inputArray): array
+function arrayReverse(array $inputArray, ?int $maxDepth = null): array
 {
-    // TODO
+    return []; // TODO
 }
 ```
 
-Here are three inputs we will use to evaluate your submission - how many of these can you solve?
+Here are three inputs we will use to evaluate your submission. **How many of these can you solve?**
 
 ```php
 // #1 - Indexed array
 $inputArray = [1, 2, 3, 4, 5];
+//print_r(arrayReverse($inputArray));
 
 // #2 - Associative array
 $inputArray = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
+//print_r(arrayReverse($inputArray));
 
-// #3 - Multidimensional. Please recursively reverse to a max depth of 2 levels
+// #3 - Multidimensional. Please recursively reverse to a max depth of 2 child levels
 $inputArray = ['a' => [1, 2, 3, 'a' => ['a', 'b', 'c' => ['a', 'b', 'c', 'd' => [1, 2, 3]]]], 2, 'c' => 3, 4, 5];
+//print_r(arrayReverse($inputArray, maxDepth: 2));
 ```
 
 _Feel free to write and test your code in your preferred environment/IDE before submitting it._
 
-*_Your submission will be evaluated in a PHP 8.1 environment_*
+**_Your submission will be evaluated in a PHP 8.1 environment_**
+
+## Testing & expected output
+Full PHPUnit tests are in place should you wish to verify before submitting
+
+### Install using composer:
+```bash
+composer install
+```
+
+### Run tests _(from your project root)_:
+```bash
+vendor/bin/phpunit
+```

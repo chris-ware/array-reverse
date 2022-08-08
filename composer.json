@@ -1,0 +1,16 @@
+{
+  "name": "evosite/arrayreverse",
+  "description": "Can you reverse an array yourself?",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Evosite Careers",
+      "email": "careers@evosite.co.uk"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  }
+}
