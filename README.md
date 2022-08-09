@@ -38,7 +38,7 @@ _Feel free to write and test your code in your preferred environment/IDE before 
 **_Your submission will be evaluated in a PHP 8.1 environment_**
 
 ## Testing & expected output
-Full PHPUnit tests are in place should you wish to verify before submitting
+Full PHPUnit tests are in place should you wish to verify before submitting, this is not a requirement though.
 
 ### Install using composer:
 ```bash
