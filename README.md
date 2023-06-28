@@ -17,7 +17,7 @@ function arrayReverse(array $inputArray, ?int $maxDepth = null): array
 }
 ```
 
-Here are three inputs we will use to evaluate your submission. **How many of these can you solve?**
+Here are three inputs we will use to evaluate your submission. **How many of these can you solve with a single function?**
 
 ```php
 // #1 - Indexed array
@@ -35,7 +35,7 @@ $inputArray = ['a' => [1, 2, 3, 'a' => ['a', 'b', 'c' => ['a', 'b', 'c', 'd' => 
 
 _Feel free to write and test your code in your preferred environment/IDE before submitting it._
 
-**_Your submission will be evaluated in a PHP 8.1 environment_**
+**_Your submission will be evaluated against the latest stable PHP version_**
 
 ## Testing & expected output
 Full PHPUnit tests are in place should you wish to verify before submitting, this is not a requirement though.
