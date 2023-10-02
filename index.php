@@ -11,7 +11,7 @@ $inputArray = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5];
 
 // #3 - Multidimensional. Please recursively reverse to a max depth of 2 child levels
 $inputArray = ['a' => [1, 2, 3, 'a' => ['a', 'b', 'c' => ['a', 'b', 'c', 'd' => [1, 2, 3]]]], 2, 'c' => 3, 4, 5];
-//print_r(arrayReverse($inputArray, maxDepth: 2));
+print_r(arrayReverse($inputArray, maxDepth: 2));
 
 /**
  * Full PHPUnit tests are in place should you wish to verify before submitting
@@ -24,5 +24,21 @@ $inputArray = ['a' => [1, 2, 3, 'a' => ['a', 'b', 'c' => ['a', 'b', 'c', 'd' => 
  */
 function arrayReverse(array $inputArray, ?int $maxDepth = null): array
 {
-    return []; // TODO
+    $count = $i = count($inputArray);
+
+    $mutatedArray = [];
+    foreach ($inputArray as $key => $value) {
+        $mutatedArray[$i] = [
+            'key' => $key,
+            'value' => is_array($value) ? arrayReverse($value) : $value,
+        ];
+        $i--;
+    }
+
+    $finalArray = [];
+    for ($j = 1; $j <= $count; $j++) {
+        $finalArray[$mutatedArray[$j]['key']] = $mutatedArray[$j]['value'];
+    }
+
+    return $finalArray;
 }
