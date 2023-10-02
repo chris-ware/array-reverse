@@ -30,7 +30,7 @@ function arrayReverse(array $inputArray, ?int $maxDepth = null): array
     foreach ($inputArray as $key => $value) {
         $mutatedArray[$i] = [
             'key' => $key,
-            'value' => is_array($value) ? arrayReverse($value) : $value,
+            'value' => is_array($value) && intval($maxDepth) > 0 ? arrayReverse($value, $maxDepth - 1) : $value,
         ];
         $i--;
     }
