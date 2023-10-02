@@ -11,7 +11,8 @@
     ],
     "require-dev": {
         "pestphp/pest": "^2.0",
-        "pestphp/pest-plugin-drift": "^2.5"
+        "pestphp/pest-plugin-drift": "^2.5",
+        "fakerphp/faker": "^1.23"
     },
     "config": {
         "allow-plugins": {

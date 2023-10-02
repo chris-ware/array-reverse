@@ -170,3 +170,12 @@ test('ensure banned functions are not used')
         'usort',
     ])
     ->not->toBeUsedIn('Src\Arr');
+
+// Faker test for fun
+
+test('array reverse matches with faker data', function () {
+    $faker = Faker\Factory::create();
+    $wordsArray = $faker->words($faker->numberBetween(5, 50));
+
+    expect(array_reverse($wordsArray, true))->toEqual(Arr::reverse($wordsArray));
+});
