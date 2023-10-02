@@ -13,14 +13,19 @@
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-drift": "^2.5"
     },
-    "autoload": {
-        "files": [
-            "src/functions.php"
-        ]
-    },
     "config": {
         "allow-plugins": {
             "pestphp/pest-plugin": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
     "scripts": {
